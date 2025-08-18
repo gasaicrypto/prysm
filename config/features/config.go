@@ -68,7 +68,7 @@ type Flags struct {
 	EnableStartOptimistic     bool // EnableStartOptimistic treats every block as optimistic at startup.
 
 	DisableResourceManager     bool // Disables running the node with libp2p's resource manager.
-	DisableStakinContractCheck bool // Disables check for deposit contract when proposing blocks
+	DisableStakingContractCheck bool // Disables check for deposit contract when proposing blocks
 
 	EnableVerboseSigVerification bool // EnableVerboseSigVerification specifies whether to verify individual signature if batch verification fails
 
@@ -420,7 +420,7 @@ func ValidateNetworkFlags(ctx *cli.Context) error {
 	return nil
 }
 
-// BlacklistedBlock returns weather the given block root belongs to the list of blacklisted roots.
+// BlacklistedBlock returns whether the given block root belongs to the list of blacklisted roots.
 func BlacklistedBlock(r [32]byte) bool {
 	blacklisted := Get().BlacklistedRoots
 	_, ok := blacklisted[r]
