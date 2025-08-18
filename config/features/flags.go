@@ -35,7 +35,7 @@ var (
 	}
 	writeSSZStateTransitionsFlag = &cli.BoolFlag{
 		Name:  "interop-write-ssz-state-transitions",
-		Usage: "Writes SSZ states to disk after attempted state transitio.",
+		Usage: "Writes SSZ states to disk after attempted state transition.",
 	}
 	saveInvalidBlockTempFlag = &cli.BoolFlag{
 		Name:  "save-invalid-block-temp",
@@ -61,7 +61,7 @@ var (
 	}
 	aggregateFirstInterval = &cli.DurationFlag{
 		Name:   "aggregate-first-interval",
-		Usage:  "(Advanced): Specifies the first interval in which attestations are aggregated in the slot (typically unnaggregated attestations are aggregated in this interval).",
+		Usage:  "(Advanced): Specifies the first interval in which attestations are aggregated in the slot (typically unaggregated attestations are aggregated in this interval).",
 		Value:  7000 * time.Millisecond,
 		Hidden: true,
 	}
@@ -157,7 +157,7 @@ var (
 	// BlobSaveFsync enforces durable filesystem writes for use cases where blob availability is critical.
 	BlobSaveFsync = &cli.BoolFlag{
 		Name:  "blob-save-fsync",
-		Usage: "Forces new blob files to be fysnc'd before continuing, ensuring durable blob writes.",
+		Usage: "Forces new blob files to be fsync'd before continuing, ensuring durable blob writes.",
 	}
 	// DisableQUIC disables connecting to peers using the QUIC protocol.
 	DisableQUIC = &cli.BoolFlag{
@@ -182,7 +182,7 @@ var (
 	// downscore peers that send them.
 	blacklistRoots = &cli.StringSliceFlag{
 		Name:  "blacklist-roots",
-		Usage: "A comma-separatted list of 0x-prefixed hexstrings. Declares blocks with the given blockroots to be invalid. It downscores peers that send these blocks.",
+		Usage: "A comma-separated list of 0x-prefixed hexstrings. Declares blocks with the given blockroots to be invalid. It downscores peers that send these blocks.",
 	}
 
 	// DisableDutiesV2 sets the validator client to use the get duties grpc endpoint
