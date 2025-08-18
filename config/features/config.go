@@ -68,7 +68,7 @@ type Flags struct {
 	EnableStartOptimistic     bool // EnableStartOptimistic treats every block as optimistic at startup.
 
 	DisableResourceManager     bool // Disables running the node with libp2p's resource manager.
-	DisableStakingContractCheck bool // Disables check for deposit contract when proposing blocks
+	DisableStakinContractCheck bool // Disables check for deposit contract when proposing blocks
 
 	EnableVerboseSigVerification bool // EnableVerboseSigVerification specifies whether to verify individual signature if batch verification fails
 
